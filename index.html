@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parking Giannakopoulos</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    :root {
+      --blue: #1e5eff;
+      --blue-dark: #1547c9;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --bg1: #eef4ff;
+      --bg2: #f9fbff;
+      --card: rgba(255, 255, 255, 0.96);
+      --shadow: 0 18px 45px rgba(27, 64, 140, 0.15);
+      --review-border: #e5e7eb;
+      --star: #f4c430;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 100%);
+      color: var(--text);
+      min-height: 100%;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px 16px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 430px;
+      background: var(--card);
+      border-radius: 28px;
+      padding: 28px 20px 22px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.85);
+      backdrop-filter: blur(6px);
+    }
+
+    .logo-dot {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--blue) 0%, #5da8ff 100%);
+      margin: 0 auto 14px;
+      box-shadow: 0 0 0 8px rgba(30, 94, 255, 0.08);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 28px;
+      line-height: 1.15;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      margin: 0 0 24px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      min-height: 62px;
+      margin: 12px 0;
+      padding: 16px 18px;
+      border-radius: 18px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 1.2;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+    }
+
+    .button:active {
+      transform: scale(0.99);
+    }
+
+    .button-primary {
+      background: linear-gradient(180deg, var(--blue) 0%, var(--blue-dark) 100%);
+      color: #ffffff;
+      box-shadow: 0 10px 24px rgba(30, 94, 255, 0.28);
+    }
+
+    .button-review {
+      background: #ffffff;
+      color: var(--text);
+      border: 1px solid var(--review-border);
+      box-shadow: 0 10px 24px rgba(17, 24, 39, 0.07);
+    }
+
+    .icon {
+      font-size: 21px;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .stars {
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
+      margin-right: 2px;
+    }
+
+    .star {
+      color: var(--star);
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    .info {
+      margin-top: 20px;
+      text-align: left;
+      font-size: 14px;
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .info strong {
+      display: block;
+      margin-top: 10px;
+    }
+
+    .footer {
+      margin-top: 22px;
+      padding-top: 16px;
+      border-top: 1px solid #edf0f5;
+      font-size: 12px;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    .footer a {
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="logo-dot"></div>
+
+    <h1>Parking Giannakopoulos</h1>
+    <p class="subtitle">Επίλεξε την ενέργεια που θέλεις και προχώρησε άμεσα.</p>
+
+    <!-- Google Maps -->
+    <a
+      class="button button-primary"
+      href="https://www.google.com/maps/place/Parking+Giannakopoulos/@38.2448717,21.738048,18z"
+    >
+      <span class="icon">📍</span>
+      <span>Βρες μας στο Google Maps</span>
+    </a>
+
+    <!-- Google Review -->
+    <a
+      class="button button-review"
+      href="https://search.google.com/local/writereview?placeid=ChIJBVEXJh9JXhMRGKEdZq44v7A"
+    >
+      <span class="stars">
+        <span class="star">★</span>
+      </span>
+      <span>Άφησε Google Review</span>
+    </a>
+
+    <!-- Call Button -->
+    <a
+      class="button button-primary"
+      href="tel:+306947763690"
+    >
+      <span class="icon">☎️</span>
+      <span>Τηλέφωνο Επικοινωνίας</span>
+    </a>
+
+    <!-- Info Section -->
+    <div class="info">
+      <strong>📍 Διεύθυνση:</strong>
+      25is Martiou 44, Patra 262 25
+
+      <strong>🕒 Ωράριο:</strong>
+      Δευτέρα: 08:00–14:00<br>
+      Τρίτη: 08:00–14:00 & 17:00–21:00<br>
+      Τετάρτη: 08:00–14:00<br>
+      Πέμπτη: 08:00–14:00 & 17:00–21:00<br>
+      Παρασκευή: 08:00–14:00 & 17:00–21:00<br>
+      Σάββατο: 08:00–14:00<br>
+      Κυριακή: Κλειστά
+    </div>
+
+    <div class="footer">
+      Powered by NFC Brelot • Jewel Art<br>
+      <a href="https://www.instagram.com/lazaros_jewelart">Instagram</a>
+    </div>
+  </main>
+</body>
+</html>
